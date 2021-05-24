@@ -1,0 +1,146 @@
+﻿<Window x:Class="Chess.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:Chess"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="850" Width="800">
+    <Grid>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+            <ColumnDefinition></ColumnDefinition>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="50"></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+            <RowDefinition></RowDefinition>
+        </Grid.RowDefinitions>
+        <!--Labels-->
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="2">8</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="3">7</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="4">6</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="5">5</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="6">4</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="7">3</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="8">2</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="9">1</Label>
+        
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="1" Grid.Row="1">A</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="2" Grid.Row="1">B</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="3" Grid.Row="1">C</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="4" Grid.Row="1">D</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="5" Grid.Row="1">E</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="6" Grid.Row="1">F</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="7" Grid.Row="1">G</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="8" Grid.Row="1">H</Label>
+         
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="2">8</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="3">7</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="4">6</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="5">5</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="6">4</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="7">3</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="8">2</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="9">1</Label>
+         
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="1" Grid.Row="10">A</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="2" Grid.Row="10">B</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="3" Grid.Row="10">C</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="4" Grid.Row="10">D</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="5" Grid.Row="10">E</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="6" Grid.Row="10">F</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="7" Grid.Row="10">G</Label>
+        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="8" Grid.Row="10">H</Label>
+        
+        <!--Buttons-->
+
+        <Button Background="Khaki"     Grid.Column="1" Grid.Row="2"></Button>
+        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="2"></Button>
+        <Button Background="Khaki"     Grid.Column="3" Grid.Row="2"></Button>
+        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="2"></Button>
+        <Button Background="Khaki"     Grid.Column="5" Grid.Row="2"></Button>
+        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="2"></Button>
+        <Button Background="Khaki"     Grid.Column="7" Grid.Row="2"></Button>
+        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="2"></Button>
+
+        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="3"></Button>
+        <Button Background="Khaki"     Grid.Column="2" Grid.Row="3"></Button>
+        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="3"></Button>
+        <Button Background="Khaki"     Grid.Column="4" Grid.Row="3"></Button>
+        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="3"></Button>
+        <Button Background="Khaki"     Grid.Column="6" Grid.Row="3"></Button>
+        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="3"></Button>
+        <Button Background="Khaki"     Grid.Column="8" Grid.Row="3"></Button>
+
+        <Button Background="Khaki"     Grid.Column="1" Grid.Row="4"></Button>
+        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="4"></Button>
+        <Button Background="Khaki"     Grid.Column="3" Grid.Row="4"></Button>
+        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="4"></Button>
+        <Button Background="Khaki"     Grid.Column="5" Grid.Row="4"></Button>
+        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="4"></Button>
+        <Button Background="Khaki"     Grid.Column="7" Grid.Row="4"></Button>
+        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="4"></Button>
+
+        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="5"></Button>
+        <Button Background="Khaki"     Grid.Column="2" Grid.Row="5"></Button>
+        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="5"></Button>
+        <Button Background="Khaki"     Grid.Column="4" Grid.Row="5"></Button>
+        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="5"></Button>
+        <Button Background="Khaki"     Grid.Column="6" Grid.Row="5"></Button>
+        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="5"></Button>
+        <Button Background="Khaki"     Grid.Column="8" Grid.Row="5"></Button>
+
+        <Button Background="Khaki"     Grid.Column="1" Grid.Row="6"></Button>
+        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="6"></Button>
+        <Button Background="Khaki"     Grid.Column="3" Grid.Row="6"></Button>
+        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="6"></Button>
+        <Button Background="Khaki"     Grid.Column="5" Grid.Row="6"></Button>
+        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="6"></Button>
+        <Button Background="Khaki"     Grid.Column="7" Grid.Row="6"></Button>
+        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="6"></Button>
+
+        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="7"></Button>
+        <Button Background="Khaki"     Grid.Column="2" Grid.Row="7"></Button>
+        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="7"></Button>
+        <Button Background="Khaki"     Grid.Column="4" Grid.Row="7"></Button>
+        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="7"></Button>
+        <Button Background="Khaki"     Grid.Column="6" Grid.Row="7"></Button>
+        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="7"></Button>
+        <Button Background="Khaki"     Grid.Column="8" Grid.Row="7"></Button>
+
+        <Button Background="Khaki"     Grid.Column="1" Grid.Row="8"></Button>
+        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="8"></Button>
+        <Button Background="Khaki"     Grid.Column="3" Grid.Row="8"></Button>
+        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="8"></Button>
+        <Button Background="Khaki"     Grid.Column="5" Grid.Row="8"></Button>
+        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="8"></Button>
+        <Button Background="Khaki"     Grid.Column="7" Grid.Row="8"></Button>
+        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="8"></Button>
+
+        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="9"></Button>
+        <Button Background="Khaki"     Grid.Column="2" Grid.Row="9"></Button>
+        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="9"></Button>
+        <Button Background="Khaki"     Grid.Column="4" Grid.Row="9"></Button>
+        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="9"></Button>
+        <Button Background="Khaki"     Grid.Column="6" Grid.Row="9"></Button>
+        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="9"></Button>
+        <Button Background="Khaki"     Grid.Column="8" Grid.Row="9"></Button>
+    </Grid>
+</Window>
