@@ -7,7 +7,45 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Folder Include="Images\" />
+    <None Remove="Images\knightWhite.png" />
+    <None Remove="Images\pawnWhite.png" />
+    <None Remove="Images\rookWhite.png" />
+    <None Remove="Resources\bishopBlack.png" />
+    <None Remove="Resources\bishopWhite.png" />
+    <None Remove="Resources\kingBlack.png" />
+    <None Remove="Resources\kingWhite.png" />
+    <None Remove="Resources\knightBlack.png" />
+    <None Remove="Resources\knightWhite.png" />
+    <None Remove="Resources\pawnBlack.png" />
+    <None Remove="Resources\pawnWhite.png" />
+    <None Remove="Resources\queenBlack.png" />
+    <None Remove="Resources\queenWhite.png" />
+    <None Remove="Resources\rookBlack.png" />
+    <None Remove="Resources\rookWhite.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Images\knightWhite.png" />
+    <Resource Include="Images\pawnWhite.png" />
+    <Resource Include="Images\rookWhite.png" />
+    <Resource Include="Resources\bishopBlack.png" />
+    <Resource Include="Resources\bishopWhite.png" />
+    <Resource Include="Resources\kingBlack.png" />
+    <Resource Include="Resources\kingWhite.png" />
+    <Resource Include="Resources\knightBlack.png" />
+    <Resource Include="Resources\knightWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\pawnBlack.png" />
+    <Resource Include="Resources\pawnWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
+    <Resource Include="Resources\queenBlack.png" />
+    <Resource Include="Resources\queenWhite.png" />
+    <Resource Include="Resources\rookBlack.png" />
+    <Resource Include="Resources\rookWhite.png">
+      <CopyToOutputDirectory>Never</CopyToOutputDirectory>
+    </Resource>
   </ItemGroup>
 
 </Project>

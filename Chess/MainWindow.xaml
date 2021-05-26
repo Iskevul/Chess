@@ -6,7 +6,52 @@
         xmlns:local="clr-namespace:Chess"
         mc:Ignorable="d"
         Title="MainWindow" Height="850" Width="800">
-    <Grid>
+    <Window.Resources>
+        <Style x:Key="WhiteField">
+            <Setter Property="Control.Background" Value="White"/>
+        </Style>
+        <Style x:Key="BlackField">
+            <Setter Property="Control.Background" Value="Black"/>
+        </Style>
+        <Style x:Key="Pawn">
+            <Setter Property="Control.Height" Value="60"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="Rook">
+            <Setter Property="Control.Height" Value="60"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="Knight">
+            <Setter Property="Control.Height" Value="60"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="Bishop">
+            <Setter Property="Control.Height" Value="60"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="Queen">
+            <Setter Property="Control.Height" Value="70"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="King">
+            <Setter Property="Control.Height" Value="70"/>
+            <Setter Property="Control.Width" Value="40"/>
+            <Setter Property="Control.RenderTransformOrigin" Value="0.5,0.5"/>
+        </Style>
+        <Style x:Key="Label">
+            <Setter Property="Control.HorizontalAlignment" Value="Center"/>
+            <Setter Property="Control.VerticalAlignment" Value="Center"/>
+            <Setter Property="Control.Background" Value="Azure"/>
+            <Setter Property="Control.FontSize" Value="20"/>
+            <Setter Property="Control.FontWeight" Value="Bold"/>
+        </Style>
+    </Window.Resources>
+        <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -33,114 +78,178 @@
             <RowDefinition></RowDefinition>
         </Grid.RowDefinitions>
         <!--Labels-->
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="2">8</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="3">7</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="4">6</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="5">5</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="6">4</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="7">3</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="8">2</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="0" Grid.Row="9">1</Label>
-        
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="1" Grid.Row="1">A</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="2" Grid.Row="1">B</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="3" Grid.Row="1">C</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="4" Grid.Row="1">D</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="5" Grid.Row="1">E</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="6" Grid.Row="1">F</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="7" Grid.Row="1">G</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="8" Grid.Row="1">H</Label>
-         
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="2">8</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="3">7</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="4">6</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="5">5</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="6">4</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="7">3</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="8">2</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="9" Grid.Row="9">1</Label>
-         
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="1" Grid.Row="10">A</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="2" Grid.Row="10">B</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="3" Grid.Row="10">C</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="4" Grid.Row="10">D</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="5" Grid.Row="10">E</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="6" Grid.Row="10">F</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="7" Grid.Row="10">G</Label>
-        <Label HorizontalAlignment="Center" VerticalAlignment="Center" Background="Azure" Grid.Column="8" Grid.Row="10">H</Label>
-        
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="2">8</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="3">7</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="4">6</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="5">5</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="6">4</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="7">3</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="8">2</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="0" Grid.Row="9">1</Label>
+
+        <Label Style="{StaticResource Label}" Grid.Column="1" Grid.Row="1">A</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="2" Grid.Row="1">B</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="3" Grid.Row="1">C</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="4" Grid.Row="1">D</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="5" Grid.Row="1">E</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="6" Grid.Row="1">F</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="7" Grid.Row="1">G</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="8" Grid.Row="1" FontSize="20" FontWeight="Bold">H</Label>
+
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="2">8</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="3">7</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="4">6</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="5">5</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="6">4</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="7">3</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="8">2</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="9" Grid.Row="9">1</Label>
+
+        <Label Style="{StaticResource Label}" Grid.Column="1" Grid.Row="10">A</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="2" Grid.Row="10">B</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="3" Grid.Row="10">C</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="4" Grid.Row="10">D</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="5" Grid.Row="10">E</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="6" Grid.Row="10">F</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="7" Grid.Row="10">G</Label>
+        <Label Style="{StaticResource Label}" Grid.Column="8" Grid.Row="10">H</Label>
+
         <!--Buttons-->
 
-        <Button Background="Khaki"     Grid.Column="1" Grid.Row="2"></Button>
-        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="2"></Button>
-        <Button Background="Khaki"     Grid.Column="3" Grid.Row="2"></Button>
-        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="2"></Button>
-        <Button Background="Khaki"     Grid.Column="5" Grid.Row="2"></Button>
-        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="2"></Button>
-        <Button Background="Khaki"     Grid.Column="7" Grid.Row="2"></Button>
-        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="2"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="2">
+            <Image Style="{StaticResource Rook}" Source="Resources/rookBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="2">
+            <Image Style="{StaticResource Knight}" Source="Resources/knightBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="2">
+            <Image Style="{StaticResource Bishop}" Source="Resources/bishopBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="2">
+            <Image Style="{StaticResource Queen}" Source="Resources/queenBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="2">
+            <Image Style="{StaticResource King}" Source="Resources/kingBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="2">
+            <Image Style="{StaticResource Bishop}" Source="Resources/bishopBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="2">
+            <Image Style="{StaticResource Knight}" Source="Resources/knightBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="2">
+            <Image Style="{StaticResource Rook}" Source="Resources/rookBlack.png"></Image>
+        </Button>
 
-        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="3"></Button>
-        <Button Background="Khaki"     Grid.Column="2" Grid.Row="3"></Button>
-        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="3"></Button>
-        <Button Background="Khaki"     Grid.Column="4" Grid.Row="3"></Button>
-        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="3"></Button>
-        <Button Background="Khaki"     Grid.Column="6" Grid.Row="3"></Button>
-        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="3"></Button>
-        <Button Background="Khaki"     Grid.Column="8" Grid.Row="3"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="3">
+            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        </Button>
 
-        <Button Background="Khaki"     Grid.Column="1" Grid.Row="4"></Button>
-        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="4"></Button>
-        <Button Background="Khaki"     Grid.Column="3" Grid.Row="4"></Button>
-        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="4"></Button>
-        <Button Background="Khaki"     Grid.Column="5" Grid.Row="4"></Button>
-        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="4"></Button>
-        <Button Background="Khaki"     Grid.Column="7" Grid.Row="4"></Button>
-        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="4"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="4"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="4"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="4"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="4"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="4"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="4"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="4"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="4"></Button>
 
-        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="5"></Button>
-        <Button Background="Khaki"     Grid.Column="2" Grid.Row="5"></Button>
-        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="5"></Button>
-        <Button Background="Khaki"     Grid.Column="4" Grid.Row="5"></Button>
-        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="5"></Button>
-        <Button Background="Khaki"     Grid.Column="6" Grid.Row="5"></Button>
-        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="5"></Button>
-        <Button Background="Khaki"     Grid.Column="8" Grid.Row="5"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="5"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="5"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="5"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="5"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="5"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="5"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="5"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="5"></Button>
 
-        <Button Background="Khaki"     Grid.Column="1" Grid.Row="6"></Button>
-        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="6"></Button>
-        <Button Background="Khaki"     Grid.Column="3" Grid.Row="6"></Button>
-        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="6"></Button>
-        <Button Background="Khaki"     Grid.Column="5" Grid.Row="6"></Button>
-        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="6"></Button>
-        <Button Background="Khaki"     Grid.Column="7" Grid.Row="6"></Button>
-        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="6"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="6"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="6"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="6"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="6"></Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="6"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="6"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="6"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="6"></Button>
 
-        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="7"></Button>
-        <Button Background="Khaki"     Grid.Column="2" Grid.Row="7"></Button>
-        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="7"></Button>
-        <Button Background="Khaki"     Grid.Column="4" Grid.Row="7"></Button>
-        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="7"></Button>
-        <Button Background="Khaki"     Grid.Column="6" Grid.Row="7"></Button>
-        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="7"></Button>
-        <Button Background="Khaki"     Grid.Column="8" Grid.Row="7"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="7"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="2" Grid.Row="7"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="7"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="4" Grid.Row="7"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="7"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="6" Grid.Row="7"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="7"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="8" Grid.Row="7"></Button>
 
-        <Button Background="Khaki"     Grid.Column="1" Grid.Row="8"></Button>
-        <Button Background="BurlyWood" Grid.Column="2" Grid.Row="8"></Button>
-        <Button Background="Khaki"     Grid.Column="3" Grid.Row="8"></Button>
-        <Button Background="BurlyWood" Grid.Column="4" Grid.Row="8"></Button>
-        <Button Background="Khaki"     Grid.Column="5" Grid.Row="8"></Button>
-        <Button Background="BurlyWood" Grid.Column="6" Grid.Row="8"></Button>
-        <Button Background="Khaki"     Grid.Column="7" Grid.Row="8"></Button>
-        <Button Background="BurlyWood" Grid.Column="8" Grid.Row="8"></Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="1" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="3" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="5" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="8">
+            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        </Button>
 
-        <Button Background="BurlyWood" Grid.Column="1" Grid.Row="9"></Button>
-        <Button Background="Khaki"     Grid.Column="2" Grid.Row="9"></Button>
-        <Button Background="BurlyWood" Grid.Column="3" Grid.Row="9"></Button>
-        <Button Background="Khaki"     Grid.Column="4" Grid.Row="9"></Button>
-        <Button Background="BurlyWood" Grid.Column="5" Grid.Row="9"></Button>
-        <Button Background="Khaki"     Grid.Column="6" Grid.Row="9"></Button>
-        <Button Background="BurlyWood" Grid.Column="7" Grid.Row="9"></Button>
-        <Button Background="Khaki"     Grid.Column="8" Grid.Row="9"></Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="9">
+            <Image Style="{StaticResource Rook}" Source="Resources/rookWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="9">
+            <Image Style="{StaticResource Knight}" Source="Resources/knightWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="9">
+            <Image Style="{StaticResource Bishop}" Source="Resources/bishopWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="9">
+            <Image Style="{StaticResource Queen}" Source="Resources/queenWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="9">
+            <Image Style="{StaticResource King}" Source="Resources/kingWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="9">
+            <Image Style="{StaticResource Bishop}" Source="Resources/bishopWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="9">
+            <Image Style="{StaticResource Knight}" Source="Resources/knightWhite.png"></Image>
+        </Button>
+        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="9">
+            <Image Style="{StaticResource Rook}" Source="Resources/rookWhite.png"></Image>
+        </Button>
     </Grid>
 </Window>
