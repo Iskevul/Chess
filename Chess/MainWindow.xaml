@@ -51,7 +51,7 @@
             <Setter Property="Control.FontWeight" Value="Bold"/>
         </Style>
     </Window.Resources>
-        <Grid>
+    <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition></ColumnDefinition>
             <ColumnDefinition></ColumnDefinition>
@@ -116,140 +116,142 @@
 
         <!--Buttons-->
 
-        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="2">
-            <Image Style="{StaticResource Rook}" Source="Resources/rookBlack.png"></Image>
+        <Button x:Name="A8" Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="2">
-            <Image Style="{StaticResource Knight}" Source="Resources/knightBlack.png"></Image>
+        <Button x:Name="B8" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="2">
-            <Image Style="{StaticResource Bishop}" Source="Resources/bishopBlack.png"></Image>
+        <Button x:Name="C8" Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="2">
-            <Image Style="{StaticResource Queen}" Source="Resources/queenBlack.png"></Image>
+        <Button x:Name="D8" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="2">
-            <Image Style="{StaticResource King}" Source="Resources/kingBlack.png"></Image>
+        <Button x:Name="E8" Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="2">
-            <Image Style="{StaticResource Bishop}" Source="Resources/bishopBlack.png"></Image>
+        <Button x:Name="F8" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="2">
-            <Image Style="{StaticResource Knight}" Source="Resources/knightBlack.png"></Image>
+        <Button x:Name="G8" Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="2">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="2">
-            <Image Style="{StaticResource Rook}" Source="Resources/rookBlack.png"></Image>
+        <Button x:Name="H8" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="2">
+
         </Button>
 
-        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="A7" Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="B7" Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="C7" Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="D7" Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="E7" Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="F7" Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="G7" Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="3">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="3">
-            <Image Style="{StaticResource Pawn}" Source="Resources/pawnBlack.png"></Image>
+        <Button x:Name="H7" Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="3">
+
         </Button>
 
-        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="4"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="4"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="4"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="4"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="4"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="4"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="4"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="4"></Button>
+        <Button x:Name="A6" Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="4"></Button>
+        <Button x:Name="B6" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="4"></Button>
+        <Button x:Name="C6" Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="4"></Button>
+        <Button x:Name="D6" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="4"></Button>
+        <Button x:Name="E6" Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="4"></Button>
+        <Button x:Name="F6" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="4"></Button>
+        <Button x:Name="G6" Style="{StaticResource WhiteField}" Grid.Column="7" Grid.Row="4"></Button>
+        <Button x:Name="H6" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="4"></Button>
 
-        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="5"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="5"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="5"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="5"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="5"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="5"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="5"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="5"></Button>
+        <Button x:Name="A5" Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="5"></Button>
+        <Button x:Name="B5" Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="5"></Button>
+        <Button x:Name="C5" Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="5"></Button>
+        <Button x:Name="D5" Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="5"></Button>
+        <Button x:Name="E5" Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="5"></Button>
+        <Button x:Name="F5" Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="5"></Button>
+        <Button x:Name="G5" Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="5"></Button>
+        <Button x:Name="H5" Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="5"></Button>
 
-        <Button Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="6"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="6"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="6"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="6"></Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="6"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="6"></Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="6"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="6"></Button>
+        <Button x:Name="A4" Style="{StaticResource WhiteField}" Grid.Column="1" Grid.Row="6"></Button>
+        <Button x:Name="B4" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="6"></Button>
+        <Button x:Name="C4" Style="{StaticResource WhiteField}" Grid.Column="3" Grid.Row="6"></Button>
+        <Button x:Name="D4" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="6"></Button>
+        <Button x:Name="E4" Style="{StaticResource WhiteField}" Grid.Column="5" Grid.Row="6"></Button>
+        <Button x:Name="F4" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="6"></Button>
+        <Button x:Name="G4" Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="6"></Button>
+        <Button x:Name="H4" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="6"></Button>
 
-        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="7"></Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="2" Grid.Row="7"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="7"></Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="4" Grid.Row="7"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="7"></Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="6" Grid.Row="7"></Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="7"></Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="8" Grid.Row="7"></Button>
+        <Button x:Name="A3" Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="7"></Button>
+        <Button x:Name="B3" Style="{StaticResource WhiteField}"     Grid.Column="2" Grid.Row="7"></Button>
+        <Button x:Name="C3" Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="7"></Button>
+        <Button x:Name="D3" Style="{StaticResource WhiteField}"     Grid.Column="4" Grid.Row="7"></Button>
+        <Button x:Name="E3" Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="7"></Button>
+        <Button x:Name="F3" Style="{StaticResource WhiteField}"     Grid.Column="6" Grid.Row="7"></Button>
+        <Button x:Name="G3" Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="7"></Button>
+        <Button x:Name="H3" Style="{StaticResource WhiteField}"     Grid.Column="8" Grid.Row="7"></Button>
 
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="1" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="A2" Style="{StaticResource WhiteField}"     Grid.Column="1" Grid.Row="8" Click="A2_Click">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="B2" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="8" Click="B2_Click">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="3" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="C2" Style="{StaticResource WhiteField}"     Grid.Column="3" Grid.Row="8" Click="C2_Click">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="D2" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="8" Click="D2_Click">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="5" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="E2" Style="{StaticResource WhiteField}"     Grid.Column="5" Grid.Row="8" Click="E2_Click">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="F2" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="8" Click="F2_Click">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="G2" Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="8" Click="G2_Click">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="8">
-            <Image Style="{StaticResource Pawn}" Source="Resources/PawnWhite.png"></Image>
+        <Button x:Name="H2" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="8" Click="H2_Click">
+
         </Button>
 
-        <Button Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="9">
-            <Image Style="{StaticResource Rook}" Source="Resources/rookWhite.png"></Image>
+        <Button x:Name="A1" Style="{StaticResource BlackField}" Grid.Column="1" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="9">
-            <Image Style="{StaticResource Knight}" Source="Resources/knightWhite.png"></Image>
+        <Button x:Name="B1" Style="{StaticResource WhiteField}" Grid.Column="2" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="9">
-            <Image Style="{StaticResource Bishop}" Source="Resources/bishopWhite.png"></Image>
+        <Button x:Name="C1" Style="{StaticResource BlackField}" Grid.Column="3" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="9">
-            <Image Style="{StaticResource Queen}" Source="Resources/queenWhite.png"></Image>
+        <Button x:Name="D1" Style="{StaticResource WhiteField}" Grid.Column="4" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="9">
-            <Image Style="{StaticResource King}" Source="Resources/kingWhite.png"></Image>
+        <Button x:Name="E1" Style="{StaticResource BlackField}" Grid.Column="5" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="9">
-            <Image Style="{StaticResource Bishop}" Source="Resources/bishopWhite.png"></Image>
+        <Button x:Name="F1" Style="{StaticResource WhiteField}" Grid.Column="6" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="9">
-            <Image Style="{StaticResource Knight}" Source="Resources/knightWhite.png"></Image>
+        <Button x:Name="G1" Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="9">
+
         </Button>
-        <Button Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="9">
-            <Image Style="{StaticResource Rook}" Source="Resources/rookWhite.png"></Image>
+        <Button x:Name="H1" Style="{StaticResource WhiteField}" Grid.Column="8" Grid.Row="9">
+
         </Button>
+        <CheckBox x:Name="checkBox" Content="Открыть фигуры" Grid.Column="7" Margin="0,0,50,0" VerticalAlignment="Center" Grid.ColumnSpan="2" RenderTransformOrigin="0.899,0.807" Height="14" Checked="CheckBox_Checked" Indeterminate="CheckBox_Indeterminate" Unchecked="CheckBox_Unchecked"/>
+        <Button x:Name="NewGame" Content="New Game"  Grid.Column="0" Grid.Row="0" Click="NewGame_Click"></Button>
     </Grid>
 </Window>

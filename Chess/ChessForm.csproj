@@ -7,9 +7,6 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\knightWhite.png" />
-    <None Remove="Images\pawnWhite.png" />
-    <None Remove="Images\rookWhite.png" />
     <None Remove="Resources\bishopBlack.png" />
     <None Remove="Resources\bishopWhite.png" />
     <None Remove="Resources\kingBlack.png" />
@@ -25,9 +22,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Resource Include="Images\knightWhite.png" />
-    <Resource Include="Images\pawnWhite.png" />
-    <Resource Include="Images\rookWhite.png" />
+    <ProjectReference Include="..\ChessMain\ChessMain.csproj" />
+    <ProjectReference Include="..\GameClasses\GameClasses.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
     <Resource Include="Resources\bishopBlack.png" />
     <Resource Include="Resources\bishopWhite.png" />
     <Resource Include="Resources\kingBlack.png" />
