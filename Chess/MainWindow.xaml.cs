@@ -30,8 +30,110 @@ namespace Chess
 
         }
 
-        public bool openFigures = false;
+        private Piece piece;
+        private Button piecePosition;
+        public string pieceName;
+        public Dictionary<string, string> buttonsBook = new Dictionary<string, string>{
+            {"A1", "rookWhite"},
+            {"B1", "knightWhite"},
+            {"C1", "bishopWhite"},
+            {"D1", "kingWhite"},
+            {"E1", "queenWhite"},
+            {"F1", "bishopWhite"},
+            {"G1", "knightWhite"},
+            {"H1", "rookWhite"},
 
+            {"A2", "pawnWhite"},
+            {"B2", "pawnWhite"},
+            {"C2", "pawnWhite"},
+            {"D2", "pawnWhite"},
+            {"E2", "pawnWhite"},
+            {"F2", "pawnWhite"},
+            {"G2", "pawnWhite"},
+            {"H2", "pawnWhite"},
+
+            {"A3", ""},
+            {"B3", ""},
+            {"C3", ""},
+            {"D3", ""},
+            {"E3", ""},
+            {"F3", ""},
+            {"G3", ""},
+            {"H3", ""},
+
+            {"A4", ""},
+            {"B4", ""},
+            {"C4", ""},
+            {"D4", ""},
+            {"E4", ""},
+            {"F4", ""},
+            {"G4", ""},
+            {"H4", ""},
+
+            {"A5", ""},
+            {"B5", ""},
+            {"C5", ""},
+            {"D5", ""},
+            {"E5", ""},
+            {"F5", ""},
+            {"G5", ""},
+            {"H5", ""},
+
+            {"A6", ""},
+            {"B6", ""},
+            {"C6", ""},
+            {"D6", ""},
+            {"E6", ""},
+            {"F6", ""},
+            {"G6", ""},
+            {"H6", ""},
+
+            {"A7", "pawnBlack"},
+            {"B7", "pawnBlack"},
+            {"C7", "pawnBlack"},
+            {"D7", "pawnBlack"},
+            {"E7", "pawnBlack"},
+            {"F7", "pawnBlack"},
+            {"G7", "pawnBlack"},
+            {"H7", "pawnBlack"},
+
+            {"A8", "rookBlack"},
+            {"B8", "knightBlack"},
+            {"C8", "bishopBlack"},
+            {"D8", "queenBlack"},
+            {"E8", "kingBlack"},
+            {"F8", "bishopBlack"},
+            {"G8", "knightBlack"},
+            {"H8", "rookBlack"},
+        };
+        public Dictionary<int, string> letters = new Dictionary<int, string>
+        {
+            {1, "A"},
+            {2, "B"},
+            {3, "C"},
+            {4, "D"},
+            {5, "E"},
+            {6, "F"},
+            {7, "G"},
+            {8, "H"},
+        };
+        public bool openFigures = false;
+        public bool selectFigure = false;
+
+        public int ClickX = 0;
+        public int ClickY = 0;
+
+        public void SelectBase(int x, int y)
+        {
+            ClickX = x;
+            ClickY = y;
+            selectFigure = true;
+        }
+
+        public void Select(int x, int y)
+        {
+
+        }
         public void placeFigure(Button button, string figure, int width, int height)
         { 
           
@@ -75,130 +177,65 @@ namespace Chess
             placeFigure(A1, "rookWhite", 40, 60);
             placeFigure(B1, "knightWhite", 40, 60);
             placeFigure(C1, "bishopWhite", 40, 60);
-            placeFigure(D1, "kingWhite", 40, 60);
-            placeFigure(E1, "queenWhite", 40, 60);
+            placeFigure(D1, "kingWhite", 40, 70);
+            placeFigure(E1, "queenWhite", 40, 70);
             placeFigure(F1, "bishopWhite", 40, 60);
             placeFigure(G1, "knightWhite", 40, 60);
             placeFigure(H1, "rookWhite", 40, 60);
-        }
-        private void A2_Click(object sender, RoutedEventArgs e)
-        {
-            placeFigure(A2, "whitePawn", 40, 60);
+
+            placeFigure(A7, "pawnBlack", 40, 60);
+            placeFigure(B7, "pawnBlack", 40, 60);
+            placeFigure(C7, "pawnBlack", 40, 60);
+            placeFigure(D7, "pawnBlack", 40, 60);
+            placeFigure(E7, "pawnBlack", 40, 60);
+            placeFigure(F7, "pawnBlack", 40, 60);
+            placeFigure(G7, "pawnBlack", 40, 60);
+            placeFigure(H7, "pawnBlack", 40, 60);
+
+            placeFigure(A8, "rookBlack", 40, 60);
+            placeFigure(B8, "knightBlack", 40, 60);
+            placeFigure(C8, "bishopBlack", 40, 60);
+            placeFigure(D8, "kingBlack", 40, 70);
+            placeFigure(E8, "queenBlack", 40, 70);
+            placeFigure(F8, "bishopBlack", 40, 60);
+            placeFigure(G8, "knightBlack", 40, 60);
+            placeFigure(H8, "rookBlack", 40, 60);
         }
 
-        private void B2_Click(object sender, RoutedEventArgs e)
+        private void Field_Click(object sender, RoutedEventArgs e)
         {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
+            Button clickedButton = (Button)sender;
+            StackPanel buttonContent = (StackPanel)clickedButton.GetType().GetProperty("Content").GetValue(clickedButton);
+            int row = Grid.GetRow(clickedButton);
+            int col = Grid.GetColumn(clickedButton);
+            string buttonName = clickedButton.Name;
+
+            //select
+            if (!selectFigure)
             {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
+                //var selectedPiece = buttonsBook[buttonName];
+                pieceName = buttonsBook[buttonName];
+                buttonsBook[buttonName] = "";
+                piece = PieceMaker.Make(pieceName, col, row);
+                piecePosition = clickedButton;
+                selectFigure = true;
+                return;
+            }
 
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
+
+            // move
+            //if (clickedButton.Content == null && piece.Move(col, row) && selectFigure)
+            if (selectFigure && piece.Move(col, row) && clickedButton.Content == null)
+            {
+                clickedButton.Content = piecePosition.Content;
+                buttonName = clickedButton.Name;
+                buttonsBook[buttonName] = pieceName;
+                piecePosition.Content = null;
+                piecePosition = clickedButton;
+                selectFigure = false;
             }
         }
 
-        private void C2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        private void D2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        private void E2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        private void F2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        private void G2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        private void H2_Click(object sender, RoutedEventArgs e)
-        {
-            if (Convert.ToBoolean(checkBox.IsChecked.ToString()))
-            {
-                Image img = new Image();
-                img.Source = new BitmapImage(new Uri(@"Resources\pawnWhite.png", UriKind.Relative));
-                img.Width = 40;
-                img.Height = 60;
-
-                StackPanel stackPnl = new StackPanel();
-                stackPnl.Orientation = Orientation.Horizontal;
-                stackPnl.Children.Add(img);
-                sender.GetType().GetProperty("Content").SetValue(sender, stackPnl);
-            }
-        }
-
-        
 
 
 

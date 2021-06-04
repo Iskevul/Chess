@@ -9,9 +9,11 @@
     <Window.Resources>
         <Style x:Key="WhiteField">
             <Setter Property="Control.Background" Value="White"/>
+            <EventSetter Event="Button.Click" Handler="Field_Click" />
         </Style>
         <Style x:Key="BlackField">
             <Setter Property="Control.Background" Value="Black"/>
+            <EventSetter Event="Button.Click" Handler="Field_Click" />
         </Style>
         <Style x:Key="Pawn">
             <Setter Property="Control.Height" Value="60"/>
@@ -202,28 +204,28 @@
         <Button x:Name="G3" Style="{StaticResource BlackField}" Grid.Column="7" Grid.Row="7"></Button>
         <Button x:Name="H3" Style="{StaticResource WhiteField}"     Grid.Column="8" Grid.Row="7"></Button>
 
-        <Button x:Name="A2" Style="{StaticResource WhiteField}"     Grid.Column="1" Grid.Row="8" Click="A2_Click">
+        <Button x:Name="A2" Style="{StaticResource WhiteField}"     Grid.Column="1" Grid.Row="8">
 
         </Button>
-        <Button x:Name="B2" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="8" Click="B2_Click">
+        <Button x:Name="B2" Style="{StaticResource BlackField}" Grid.Column="2" Grid.Row="8">
 
         </Button>
-        <Button x:Name="C2" Style="{StaticResource WhiteField}"     Grid.Column="3" Grid.Row="8" Click="C2_Click">
+        <Button x:Name="C2" Style="{StaticResource WhiteField}"     Grid.Column="3" Grid.Row="8">
 
         </Button>
-        <Button x:Name="D2" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="8" Click="D2_Click">
+        <Button x:Name="D2" Style="{StaticResource BlackField}" Grid.Column="4" Grid.Row="8">
 
         </Button>
-        <Button x:Name="E2" Style="{StaticResource WhiteField}"     Grid.Column="5" Grid.Row="8" Click="E2_Click">
+        <Button x:Name="E2" Style="{StaticResource WhiteField}"     Grid.Column="5" Grid.Row="8">
 
         </Button>
-        <Button x:Name="F2" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="8" Click="F2_Click">
+        <Button x:Name="F2" Style="{StaticResource BlackField}" Grid.Column="6" Grid.Row="8">
 
         </Button>
-        <Button x:Name="G2" Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="8" Click="G2_Click">
+        <Button x:Name="G2" Style="{StaticResource WhiteField}"     Grid.Column="7" Grid.Row="8">
 
         </Button>
-        <Button x:Name="H2" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="8" Click="H2_Click">
+        <Button x:Name="H2" Style="{StaticResource BlackField}" Grid.Column="8" Grid.Row="8">
 
         </Button>
 

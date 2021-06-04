@@ -7,7 +7,7 @@ namespace GameClasses
 
     }
 
-    class PieceMaker
+    public class PieceMaker
     {
         static public Piece Make(string pieceCode, int x, int y)
         {
@@ -15,43 +15,38 @@ namespace GameClasses
 
             switch (pieceCode)
             {
-                case "King":
-                case "1":
-                case "K":
+                case "kingWhite":
+                case "kingBlack":
+                
                     piece = new King(x, y);
                     break;
 
-                case "Queen":
-                case "2":
-                case "Q":
+                case "queenWhite":
+                case "queenBlack":
                     piece = new Queen(x, y);
                     break;
 
-                case "Bishop":
-                case "3":
-                case "B":
+                case "bishopWhite":
+                case "bishopBlack":
                     piece = new Bishop(x, y);
                     break;
 
-                case "Knight":
-                case "4":
-                case "N":
+                case "knightWhite":
+                case "knightBlack":
                     piece = new Knight(x, y);
                     break;
 
-                case "Rook":
-                case "5":
-                case "R":
+                case "rookWhite":
+                case "rookBlack":
                     piece = new Rook(x, y);
                     break;
 
-                case "Pawn":
-                case "6":
-                case "P":
+                case "pawnWhite":
+                case "pawnBlack":
                     piece = new Pawn(x, y);
                     break;
 
-                default: throw (new Exception("Unknown piece code."));
+                //default: throw (new Exception("Unknown piece code."));
             }
 
             return piece;
@@ -66,9 +61,9 @@ namespace GameClasses
     // -------------------------------------------------------
     // Piece classes 
 
-    abstract class Piece
+    public abstract class Piece
     {
-        protected int x;
+        public int x;
         protected int y;
 
         public Piece(int newX, int newY)
@@ -100,6 +95,17 @@ namespace GameClasses
             return (Math.Abs(x - newX) <= 1 && Math.Abs(y - newY) <= 1);
         }
 
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
+        }
+
     }
 
     class Queen : Piece
@@ -111,6 +117,17 @@ namespace GameClasses
         {
             return (x == newX || y == newY || Math.Abs(x - newX) == Math.Abs(y - newY));
         }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
+        }
     }
 
     class Bishop : Piece
@@ -121,6 +138,17 @@ namespace GameClasses
         public override bool TestMove(int newX, int newY)
         {
             return (Math.Abs(x - newX) == Math.Abs(y - newY));
+        }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
         }
     }
 
@@ -134,6 +162,17 @@ namespace GameClasses
             return ((Math.Abs(x - newX) == 2 && Math.Abs(y - newY) == 1) ||
                     (Math.Abs(x - newX) == 1 && Math.Abs(y - newY) == 2));
         }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
+        }
     }
 
     class Rook : Piece
@@ -144,6 +183,17 @@ namespace GameClasses
         public override bool TestMove(int newX, int newY)
         {
             return (x == newX || y == newY);
+        }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
         }
 
     }
@@ -157,6 +207,17 @@ namespace GameClasses
         {
             return ((x == newX && y == 2 && y + 2 >= newY) ||
                     (x == newX && y + 1 == newY));
+        }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
         }
 
     }
