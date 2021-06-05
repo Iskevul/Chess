@@ -130,10 +130,6 @@ namespace Chess
             selectFigure = true;
         }
 
-        public void Select(int x, int y)
-        {
-
-        }
         public void placeFigure(Button button, string figure, int width, int height)
         { 
           
@@ -209,16 +205,17 @@ namespace Chess
             int row = Grid.GetRow(clickedButton);
             int col = Grid.GetColumn(clickedButton);
             string buttonName = clickedButton.Name;
+            //pieceName = buttonsBook[buttonName];
 
             //select
             if (!selectFigure)
             {
                 //var selectedPiece = buttonsBook[buttonName];
                 pieceName = buttonsBook[buttonName];
-                buttonsBook[buttonName] = "";
                 piece = PieceMaker.Make(pieceName, col, row);
                 piecePosition = clickedButton;
                 selectFigure = true;
+                buttonsBook[buttonName] = "";
                 return;
             }
 

@@ -42,11 +42,14 @@ namespace GameClasses
                     break;
 
                 case "pawnWhite":
-                case "pawnBlack":
-                    piece = new Pawn(x, y);
+                    piece = new whitePawn(x, y);
                     break;
 
-                //default: throw (new Exception("Unknown piece code."));
+                case "pawnBlack":
+                    piece = new blackPawn(x, y);
+                    break;
+
+                    //default: throw (new Exception("Unknown piece code."));
             }
 
             return piece;
@@ -198,15 +201,39 @@ namespace GameClasses
 
     }
 
-    class Pawn : Piece
+    class blackPawn : Piece
     {
-        public Pawn(int newX, int newY) : base(newX, newY)
+        public blackPawn(int newX, int newY) : base(newX, newY)
         { }
 
         public override bool TestMove(int newX, int newY)
         {
             return ((x == newX && y == 2 && y + 2 >= newY) ||
                     (x == newX && y + 1 == newY));
+        }
+
+        public bool Move(int newX, int newY)
+        {
+            if (TestMove(newX, newY))
+            {
+                x = newX;
+                y = newY;
+                return true;
+            }
+            return false;
+        }
+
+    }
+
+    class whitePawn : Piece
+    {
+        public whitePawn(int newX, int newY) : base(newX, newY)
+        { }
+
+        public override bool TestMove(int newX, int newY)
+        {
+            return ((x == newX && y == 2 && y - 2 >= newY) ||
+                    (x == newX && y - 1 == newY));
         }
 
         public bool Move(int newX, int newY)
